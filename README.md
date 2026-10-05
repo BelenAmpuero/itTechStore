@@ -1,16 +1,105 @@
-# React + Vite
+# 💻 ITECH · E-commerce en React
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Aplicación web de e-commerce desarrollada con **React** y **Vite**. Usa **Firebase (Firestore)** como base de datos para simular un backend real, y **Tailwind CSS con daisyUI** para una interfaz responsiva y moderna.
 
-Currently, two official plugins are available:
+Proyecto final de **React** (Coderhouse).
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+🔗 **Demo:** `[completar enlace del deploy]`
 
-## React Compiler
+## ✨ Funcionalidades
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+> Revisá esta lista y dejá solo lo que tu app realmente hace.
 
-## Expanding the ESLint configuration
+- Catálogo de productos cargado desde Firestore
+- Navegación entre páginas con React Router `[inicio, detalle de producto, carrito, checkout]`
+- Filtro de productos por categoría `[si lo tiene]`
+- Carrito de compras `[agregar, quitar y calcular el total]`
+- Generación de órdenes de compra guardadas en Firestore `[si lo tiene]`
+- Notificaciones al usuario con react-hot-toast
+- Modo claro y oscuro con next-themes `[si lo tiene]`
+- Animaciones con Framer Motion
+- Diseño responsivo
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## 🛠️ Tecnologías
+
+**Frontend**
+- React 19
+- Vite 7
+- React Router 7
+- Tailwind CSS 4 + daisyUI 5
+- Framer Motion
+- Emotion
+- React Icons y Lucide React
+- React Hot Toast
+- next-themes
+
+**Base de datos**
+- Firebase / Firestore
+
+**Calidad de código**
+- ESLint
+
+## 🚀 Instalación
+
+1. Cloná el repositorio:
+   ```bash
+   git clone https://github.com/BelenAmpuero/[nombre-del-repo].git
+   cd [nombre-del-repo]
+   ```
+2. Instalá las dependencias:
+   ```bash
+   npm install
+   ```
+3. Configurá Firebase (ver la sección siguiente).
+4. Iniciá el servidor de desarrollo:
+   ```bash
+   npm run dev
+   ```
+   La app queda disponible en `http://localhost:5173`.
+
+## 🔥 Configuración de Firebase
+
+1. Creá un proyecto en la [consola de Firebase](https://console.firebase.google.com/).
+2. Agregá una **app web** y copiá los datos de configuración.
+3. Activá **Firestore Database**.
+4. Creá un archivo `.env` en la raíz del proyecto:
+   ```env
+   VITE_FIREBASE_API_KEY=tu_api_key
+   VITE_FIREBASE_AUTH_DOMAIN=tu_proyecto.firebaseapp.com
+   VITE_FIREBASE_PROJECT_ID=tu_project_id
+   VITE_FIREBASE_STORAGE_BUCKET=tu_proyecto.appspot.com
+   VITE_FIREBASE_MESSAGING_SENDER_ID=tu_sender_id
+   VITE_FIREBASE_APP_ID=tu_app_id
+   ```
+   > Ajustá los nombres a los que uses en tu archivo de configuración de Firebase.
+5. Cargá los productos en la colección `[nombre de la colección]` de Firestore.
+
+> ⚠️ No subas tu archivo `.env` al repositorio. Verificá que esté en el `.gitignore`.
+
+## 📜 Scripts disponibles
+
+| Comando | Descripción |
+|---------|-------------|
+| `npm run dev` | Inicia el servidor de desarrollo con HMR |
+| `npm run build` | Genera la versión de producción en `dist/` |
+| `npm run preview` | Previsualiza la build de producción |
+| `npm run lint` | Ejecuta ESLint sobre el proyecto |
+
+## 📁 Estructura del proyecto
+
+```
+src/
+├── components/    # Componentes reutilizables
+├── pages/         # Páginas de la aplicación
+├── context/       # Estado global (carrito, tema)
+├── firebase/      # Configuración de Firebase
+├── App.jsx
+└── main.jsx
+```
+
+> Reemplazá este árbol por tu estructura real.
+
+## 👩‍💻 Autora
+
+**Belén Ampuero**
+[LinkedIn](https://www.linkedin.com/in/belén-ampuero-625047308) · [GitHub](https://github.com/BelenAmpuero)
