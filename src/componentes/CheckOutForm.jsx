@@ -1,7 +1,3 @@
-import { useContext } from "react";
-import { createOrder } from "../firebase/db";
-import { CartContext } from "./context/CartContext"
-
 function CheckoutForm({ onConfirm }) {
 
   const handleSubmit = (e) => {
@@ -30,7 +26,7 @@ function CheckoutForm({ onConfirm }) {
       <form className="flex flex-col gap-4" onSubmit={handleSubmit}>
         {/* Nombre */}
         <div>
-          <label className="block text-sm font-medium text-gray-600 mb-1" id= 'name'>
+          <label htmlFor="block text-sm font-medium text-gray-600 mb-1" id= 'name'>
             Nombre completo
           </label>
           <input
@@ -43,7 +39,7 @@ function CheckoutForm({ onConfirm }) {
 
         {/* Email */}
         <div>
-          <label className="block text-sm font-medium text-gray-600 mb-1" id= 'email'>
+          <label htmlFor="block text-sm font-medium text-gray-600 mb-1" id= 'email'>
             Email
           </label>
           <input
@@ -56,7 +52,7 @@ function CheckoutForm({ onConfirm }) {
 
         {/* Teléfono */}
         <div>
-          <label className="block text-sm font-medium text-gray-600 mb-1" id= 'telefono'>
+          <label htmlFor="block text-sm font-medium text-gray-600 mb-1" id= 'telefono'>
             Teléfono
           </label>
           <input
@@ -70,7 +66,7 @@ function CheckoutForm({ onConfirm }) {
 
         {/* Dirección */}
         <div>
-          <label className="block text-sm font-medium text-gray-600 mb-1" id= 'direccion'>
+          <label htmlFor="block text-sm font-medium text-gray-600 mb-1" id= 'direccion'>
             Dirección
           </label>
           <input
@@ -82,7 +78,7 @@ function CheckoutForm({ onConfirm }) {
         </div>
 
         {/* Ciudad + CP */}
-        <div className="flex gap-3">
+        <div htmlFor="flex gap-3">
           <input
           name= "ciudad"
             type="text"

@@ -6,7 +6,6 @@ import { BrowserRouter, Routes, Route } from "react-router";
 import { Toaster } from 'react-hot-toast';
 import CartProvider from "./componentes/context/CartProvider";
 import Footer from "./componentes/Footer"
-import AboutUs from "./componentes/AboutUs"
 import ScrollTop from "./ScrollTop.jsx";
 
 

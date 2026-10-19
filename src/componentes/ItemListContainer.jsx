@@ -33,20 +33,17 @@ useEffect(()=> {
   fetchData();
 }, [id]);
 
-if (loading) {
-    return(
-        <Skeleton/>
-    )
-}
+return (
+  <>
 
-    return (
-      <>
-      <img src={banner} className="w-full h-[400px] object-cover"/>
-    <ItemList items = {items} /> 
-     <AboutUs/>
-    </>  
-    
- )
+    <section id="productos" className="scroll-mt-20">
+      {loading ? <Skeleton /> : <ItemList items={items} />}
+    </section>
+
+    <AboutUs />
+  </>
+
+)
 }
 
 export default ItemListContainer;

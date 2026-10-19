@@ -6,7 +6,7 @@ function CartItem({ id, name, quantity, url }) {
 const { removeItem, increaseItem, decreaseItem } = useContext(CartContext)
 
 return (
-<div className="flex justify-around items-center border-b p-3 mb-3">
+<div className="flex justify-around items-center border-b p-3 mb-3 text-gray-800">
 
 <img src={url} alt={name} className="w-20 h-20"/>
 

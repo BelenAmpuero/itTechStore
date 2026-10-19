@@ -73,14 +73,14 @@ function Navbar({ categories }) {
 
         <div className="relative group cursor-pointer">
 
-          <div>Categorias</div>
+          <div className="transition group-hover:text-accent">Categorias</div>
 
           <ul className="absolute pt-3 left-0 hidden group-hover:grid bg-base-100 text-white rounded-box w-96 p-2 shadow-sm grid-cols-2 gap-2 z-50">
 
             {categories.map(cat => (
               <li
                 key={cat.id}
-                className="hover:bg-base-200 rounded px-2 py-1"
+                className="block px-2 py-1 transition hover:text-accent"
               >
                 <Link to={`/category/${cat.name}`}>
                   {cat.name}

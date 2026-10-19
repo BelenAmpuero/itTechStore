@@ -2,7 +2,7 @@ import ItemCounter from "./ItemCounter"
 
 function ItemDetail({detail}) {
     return (<div className="hero bg-base-200 min-h-screen">
-    <div className="hero-content flex-col lg:flex-row gap-10">
+    <div className="hero-content flex-col lg:flex-row gap-10 text-gray-300">
 
     <img
     src={detail?.url}

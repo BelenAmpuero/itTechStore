@@ -1,6 +1,5 @@
 import { getFirestore, collection, getDocs, query, where, doc, getDoc, addDoc, serverTimestamp } from "firebase/firestore";
 import { app } from './config.js';
-import { DribbbleIcon } from "lucide-react";
 
 const db = getFirestore(app)
 
@@ -67,7 +66,6 @@ export const createOrder = async (user, item, total) => {
     const docRef = await addDoc(collection(db, "orders"), order );
     return docRef.id 
 
-    console.log("Documento creado con ID:", docRef.id);
   } catch (error) {
     console.error("Error al agregar documento:", error);
   }
