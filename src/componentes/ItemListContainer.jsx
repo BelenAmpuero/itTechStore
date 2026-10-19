@@ -35,6 +35,7 @@ useEffect(()=> {
 
 return (
   <>
+   <img src={banner} className="w-full h-[400px] object-cover" />
 
     <section id="productos" className="scroll-mt-20">
       {loading ? <Skeleton /> : <ItemList items={items} />}
